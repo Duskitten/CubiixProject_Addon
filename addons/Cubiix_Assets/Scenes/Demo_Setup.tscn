@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://cyp35a2nxqsox"]
+
+[ext_resource type="Script" path="res://addons/Cubiix_Assets/Scripts/Load_Setup.gd" id="1_g43xj"]
+[ext_resource type="Texture2D" uid="uid://caocu8ismxrsl" path="res://addons/Cubiix_Assets/Textures/MindVirus_LGBT3.png" id="2_kcljh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dy2gc"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="CoreLoader" type="Node"]
+script = ExtResource("1_g43xj")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Loading" type="Panel" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_dy2gc")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Loading"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 86.0
+offset_bottom = -101.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_kcljh")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="CanvasLayer/Loading/TextureRect"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "1231123123"
+horizontal_alignment = 1

@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://co7v5bt8xi81"]
+
+[ext_resource type="Script" path="res://addons/Cubiix_Assets/Scripts/Character_Generator.gd" id="1_kx318"]
+[ext_resource type="Script" path="res://addons/Cubiix_Assets/Scripts/Character_ScriptLoader.gd" id="1_ro8ye"]
+
+[sub_resource type="Skin" id="Skin_xqg4r"]
+
+[node name="Cubiix_Character" type="CharacterBody3D"]
+collision_layer = 130
+collision_mask = 130
+wall_min_slide_angle = 3.14159
+floor_stop_on_slope = false
+floor_block_on_wall = false
+script = ExtResource("1_ro8ye")
+
+[node name="Hub" type="Node3D" parent="."]
+script = ExtResource("1_kx318")
+
+[node name="Cubiix_Model" type="Node3D" parent="Hub"]
+
+[node name="Armature" type="Node3D" parent="Hub/Cubiix_Model"]
+
+[node name="Skeleton3D" type="Skeleton3D" parent="Hub/Cubiix_Model/Armature"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Hub/Cubiix_Model/Armature/Skeleton3D"]
+layers = 262145
+skin = SubResource("Skin_xqg4r")
